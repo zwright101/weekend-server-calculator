@@ -13,12 +13,12 @@
     <br>
     <div id="calculatorDiv">
         <input type="number" id="firstInput">
-        <button type="button" id="additionButton" onclick=""></button>
-        <button type="button" id="subtractionButton" onclick=""></button>
-        <button type="button" id="multiplyButton" onclick=""></button>
-        <button type="button" id="divideButton" onclick=""></button>
+        <button type="button" id="additionButton" onclick="operatorButton(event)" value="+">+</button>
+        <button type="button" id="subtractionButton" onclick="operatorButton(event)" value="-">-</button>
+        <button type="button" id="multiplyButton" onclick="operatorButton(event)" value="*">*</button>
+        <button type="button" id="divideButton" onclick="operatorButton(event)" value="/">/</button>
         <input type="number" id="secondInput">
-        <button type="button" id="answerButton" onclick=""></button>
+        <button type="button" id="equalsButton" onclick="equalsButton(event)">=</button>
         <button type="button" id="clearButton" onclick=""></button>
     </div>
     <br>
