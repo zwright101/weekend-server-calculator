@@ -40,6 +40,7 @@ function results(){
         console.log(response);
         let answerDiv = document.querySelector('#answer');
         let answerFromServer = response.data;
+        
 
         for (let answer of answerFromServer){
             answerDiv.innerHTML = `
@@ -49,17 +50,18 @@ function results(){
     })
 }
 
-function showAnswers(){
+function previousAnswers(){
     axios.get('/history').then((response) => {
         console.log(response);
-        let numbersFromServer = response.data;
+        let numbers = response.data;
         let answerDiv = document.querySelector('#answer')
+        // answerDiv.innerHTML = '';
 
         answerDiv.innerHTML += `
         <ul>
             <li>   
                 <p>
-                ${numbersFromServer[numbersFromServer.length - 1]}
+                ${numbers[numbers.length - 1]}
                 </p>
             </li>    
         </ul>
@@ -74,9 +76,15 @@ function showAnswers(){
 function deleteAnswer(index){
     axios.delete(`/history/${index}`).then((response) => {
         console.log(response);
-        showAnswers();
+        previousAnswers();
     }).catch((error) => {
         console.log(error);
         alert('Something went Wrong!')
     })
+}
+
+function clear(){
+    document.querySelector('#firstInput').value = '';
+    document.querySelector('#secondInput').value = '';
+    operator = '';
 }

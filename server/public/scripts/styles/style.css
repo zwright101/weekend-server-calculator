@@ -1,0 +1,71 @@
+header {
+    text-align: center;
+    background-color: lightblue;
+    color: black;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+#firstInput {
+    font-size: large;
+}
+
+#additionButton {
+    font-size: large;
+    background-color: black;
+    color: white;
+    border-radius: 4px;   
+}
+
+#subtractionButton {
+    font-size: large;
+    background-color: black;
+    color: white;
+    border-radius: 4px;   
+}
+
+#multiplyButton {
+    font-size: large;
+    background-color: black;
+    color: white;
+    border-radius: 4px;   
+}
+
+#divideButton {
+    font-size: large;
+    background-color: black;
+    color: white;
+    border-radius: 4px;   
+}
+
+#secondInput {
+    font-size: large;   
+}
+
+#equalsButton {
+    font-size: large;
+    background-color: black;
+    color: white;   
+    border-radius: 4px;  
+}
+
+#clearButton {
+    font-size: large;
+    background-color: black;
+    color: white;
+    border-radius: 4px;   
+}
+
+#answer {
+    background-color: lightblue;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#previousAnswers {
+    background-color: lightblue;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+}

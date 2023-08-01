@@ -3,7 +3,6 @@ let app = express();
 const port = 5001;
 
 app.use(express.json());
-
 app.use(express.static('server/public'));
 
 app.listen(port, function(){
@@ -11,7 +10,6 @@ app.listen(port, function(){
 })
 
 let results = [];
-
 let resultHistory = [];
 
 app.get('/results' , (req, res) => {
@@ -43,4 +41,11 @@ app.post('/history' , (req, res) => {
     resultHistory.push(calculation);
     results.push(newResult);
     res.sendStatus(201);
+})
+
+app.delete('/history/:id' , (req, res) => {
+    console.log(req.params.id);
+    const deleteIndex = Number(req.params.id);
+    resultHistory = resultHistory.filter((numbers, index) => index !== deleteIndex);
+    res.sendStatus(204);
 })
